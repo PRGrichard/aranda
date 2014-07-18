@@ -1,0 +1,97 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M995.828 995.826c-37.566 37.564-98.45 37.564-136.016 0l-169.726-169.726c-69.776 44.764-152.26 71.434-241.318 71.434-247.83 0-448.768-200.908-448.768-448.768s200.938-448.766 448.768-448.766c247.862 0 448.768 200.904 448.768 448.766 0 89.028-26.704 171.542-71.436 241.352l169.728 169.726c37.562 37.564 37.562 98.418 0 135.982zM448.768 128.218c-177.022 0-320.548 143.494-320.548 320.546s143.526 320.548 320.548 320.548c177.052 0 320.548-143.496 320.548-320.548s-143.496-320.546-320.548-320.546z"
+				],
+				"tags": [
+					"search",
+					"find",
+					"lookup",
+					"magnifier"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"id": 10,
+				"order": 1,
+				"prevSize": 16,
+				"code": 58880,
+				"name": "search",
+				"ligatures": ""
+			},
+			"setIdx": 2,
+			"iconIdx": 10
+		},
+		{
+			"icon": {
+				"paths": [
+					"M1024 448v128h-133.812c-9.562 56.688-32.094 108.75-63.656 154.062l134.218 116.688-92.376 114.124-147.968-128.688c-43.094 28-91.624 48.438-144.406 57.376v134.438h-128v-133.812c-52.938-8.938-101.532-29.562-144.656-57.812l-147.718 128.5-92.376-114.124 134.438-116.938c-31.312-45.252-53.688-97.19-63.25-153.814h-134.438v-128h133.812c9.562-56.688 32.094-108.75 63.656-154.062l-134.218-116.688 92.376-114.124 147.968 128.688c43.094-28 91.624-48.438 144.406-57.376v-134.438h128v134.438c52.782 8.938 101.312 29.376 144.406 57.376l147.968-128.688 92.376 114.124-134.218 116.688c31.562 45.312 54.094 97.376 63.656 154.062h133.812zM512 320c-106.032 0-192 85.938-192 192s85.968 192 192 192 192-85.938 192-192-85.968-192-192-192z"
+				],
+				"tags": [
+					"settings",
+					"cog",
+					"gear",
+					"options",
+					"preferences"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"id": 53,
+				"order": 2,
+				"prevSize": 16,
+				"code": 58881,
+				"name": "settings",
+				"ligatures": ""
+			},
+			"setIdx": 2,
+			"iconIdx": 53
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "icomoon"
+	},
+	"preferences": {
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "icomoon"
+			},
+			"showGlyphs": true,
+			"metrics": {
+				"emSize": 512,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"resetPoint": 58880,
+			"showQuickUse": true,
+			"quickUsageToken": false,
+			"showMetrics": true,
+			"showMetadata": false,
+			"autoHost": false
+		},
+		"imagePref": {
+			"color": 0,
+			"height": 32,
+			"columns": 16,
+			"margin": 16,
+			"png": false,
+			"sprites": true
+		},
+		"historySize": 100,
+		"showCodes": true,
+		"gridSize": 16,
+		"showLiga": false,
+		"showGrid": true,
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"search": "",
+		"quickUsageToken": {
+			"UntitledProject1": "YmMyYTE1NThhMWZlNWJjNjE1YmY0YzBhMDU0Y2IwNjMjMiMxNDA1MTMxNjI5IyMj"
+		}
+	}
+}
