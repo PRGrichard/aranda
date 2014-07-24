@@ -359,6 +359,19 @@ header h1:hover
 }
 
 
+#msg_resultados
+{
+    width: 100%;
+    background: rgb(210, 210, 210);
+    float: right;
+    text-align: center;
+    
+}
 
+#msg_resultados h4
+{
+    color: white;
+    font-family: 'Francois One', sans-serif;
+}
 
 

@@ -5,6 +5,7 @@ Validar = function(word){
 
   Validar.prototype.retornarValidacion = function(){
 
+      //Array controla los caracteres invalidos
       var  ctrValidar = ['@' , '#'];
       var w = this.word;
       var lengW =  this.word

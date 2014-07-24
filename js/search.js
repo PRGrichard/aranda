@@ -1,11 +1,13 @@
 
 //Clase Search
- var Search = function(url, apikey, query, pg){
+ //ctd = contador de paginas "paginador de scroll infinito" 
+ //n_pg numero de pagina default 1
+ var Search = function(url, apikey, query, nPg){
 
     this.url = url;
     this.apikey = apikey;
-    this.query = query; 
-    this.pg = pg;
+    this.query = query;   
+    this.nPg = nPg;
 
     //Metodo que trae  las peliculas por el nombre a buscar
     Search.prototype.searchPeliculaSerie = function(){
@@ -19,7 +21,7 @@
 
        html = Mustache.render(Templates.peliculas, {
        title: title,
-        thumb : thumb
+       thumb : thumb
     });
 
     return html;
@@ -38,30 +40,18 @@
              html += listTemplate(res[i]); 
           };
           
-          (function paginar(paginas){         
-            
-            $(window).scroll(function(){
-              if ($(window).scrollTop() == $(document).height() - $(window).height()){         
-                 
-                return pg += 1;                                        
-              }
-           });
-           }(total_resul));   
-
           var $article =  $('#container')
-          $article.html(html);
+          $article.append(html);
     }
-
 
 
     $.ajax({
       url: this.url,
       type: 'get',
       dataType: 'json',
-      data: {api_key:  this.apikey, query:  this.query, pg: this.pg, include_adult: false},
+      data: {api_key:  this.apikey, query:  this.query, page: this.nPg, include_adult: false},
     })
     .done(callback);
-
                 
     }
 
