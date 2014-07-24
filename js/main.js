@@ -33,13 +33,6 @@ $(document).on('ready', function(){
           var c = 1;
         };
 
-      
-        function msg(){
-          var article =  $('#container')                                     
-          $('#alert-data').css('visibility', 'visible');
-          $('#alert-data').html( "<p>Caracter Inválido</em></p>" );                                                  
-         }
-
         $($divWord).on('keyup', function(){
             query = $('#target-s input').val();
             //incio de pagina en 1 de nuevo;
@@ -59,17 +52,11 @@ $(document).on('ready', function(){
                           
             }());    
 
-            validacion = ojbWord.retornarValidacion();
-
-            //conprovando la validación  de caracteres
-            if(ojbWord.retornarValidacion()  === true){
-                msg();
-            }
+           
         })
         }());  
               
     
-             
         //paginado de 20 por pagina
           $(window).scroll(function(){
            if(typeof res_pag != 'undefined'){

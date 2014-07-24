@@ -8,7 +8,7 @@
     this.apikey = apikey;
     this.query = query;   
     this.nPg = nPg;
-    
+
 
     //Metodo que trae  las peliculas por el nombre a buscar
     Search.prototype.searchPeliculaSerie = function(){
@@ -37,9 +37,24 @@
     }
 
     function callback(res) {
-
           res_pag  = res.total_pages;
           total_resul =  res.total_results;
+
+          //conprovando la validación  si el objeto esta vacio o hay resultados en la búsqueda
+          if(total_resul === 0){
+               var article =  $('#container')                                     
+               $('#alert-data').css('visibility', 'visible');
+               $('#alert-data').html( "<p>No hay resultados</em></p>" );
+          }
+
+           validacion = ojbWord.retornarValidacion();
+
+            //conprovando la validación  de caracteres
+            if(ojbWord.retornarValidacion()  === true){
+                var article =  $('#container')                                     
+              $('#alert-data').css('visibility', 'visible');
+              $('#alert-data').html( "<p>Caracter Inválido</em></p>" );      
+            }
                        
           res = res.results;
           html = ' ';
