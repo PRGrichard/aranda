@@ -61,7 +61,8 @@ $(document).on('ready', function(){
           $(window).scroll(function(){
            if(typeof res_pag != 'undefined'){
             if ($(window).scrollTop() == $(document).height()  - $(window).height()){
-                c += 1;        
+                c += 1; 
+                console.log(c);       
                 if(c <= res_pag){
                     objSP = new Search('http://api.themoviedb.org/3/search/tv', 'a6f2f098a83113aa672bd04867dba148', query, c);
                     series = objSP.searchPeliculaSerie();                    
