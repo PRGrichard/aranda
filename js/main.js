@@ -1,6 +1,6 @@
 $(document).on('ready', function(){
-  
 
+    
 
     //Evitar que el formulario se valla por submit 
     function stopRKey(evt) {
@@ -30,11 +30,10 @@ $(document).on('ready', function(){
           $( "#container" ).empty();
           $("target-s input ").empty();
           $('#alert-data').css('visibility', 'hidden');
+          var c = 1;
         };
 
-       
-
-
+      
         function msg(){
           var article =  $('#container')                                     
           $('#alert-data').css('visibility', 'visible');
@@ -43,18 +42,8 @@ $(document).on('ready', function(){
 
         $($divWord).on('keyup', function(){
             query = $('#target-s input').val();
-
-             (function inicializarObjeto(){
-                limpia();
-                //Inicializando el OBjeto de la consulta 
-                objSP = new Search('http://api.themoviedb.org/3/search/movie', 'a6f2f098a83113aa672bd04867dba148', query);
-                peliculas = objSP.searchPeliculaSerie();
-                return res_pag;
-                
-            }());    
-
-          
-
+            //incio de pagina en 1 de nuevo;
+            c = 1;
             ojbWord = new Validar(query);
             
             //validando que la quiery no se valla vacia 
@@ -62,29 +51,36 @@ $(document).on('ready', function(){
                 query = '//';
             }
 
+             (function inicializarObjeto(){
+                limpia();
+                //Inicializando el OBjeto de la consulta 
+                objSP = new Search('http://api.themoviedb.org/3/search/tv', 'a6f2f098a83113aa672bd04867dba148', query, c);
+                series = objSP.searchPeliculaSerie();
+                          
+            }());    
+
             validacion = ojbWord.retornarValidacion();
 
             //conprovando la validación  de caracteres
             if(ojbWord.retornarValidacion()  === true){
                 msg();
             }
-            })
-            }());  
+        })
+        }());  
               
+    
              
-
-            //contador de pagina        
-            var c = 1;       
-            $(window).scroll(function(){
-              if ($(window).scrollTop() == $(document).height() - $(window).height()){
-                  c += 1;
-                  console.log(res_pag);    
-                  if(c <= res_pag){
-                      objSP = new Search('http://api.themoviedb.org/3/search/movie', 'a6f2f098a83113aa672bd04867dba148', query, c);
-                      peliculas = objSP.searchPeliculaSerie();                    
-                  }      
-                }
-             });
-             
+        //paginado de 20 por pagina
+          $(window).scroll(function(){
+           if(typeof res_pag != 'undefined'){
+            if ($(window).scrollTop() == $(document).height()  - $(window).height()){
+                c += 1;        
+                if(c <= res_pag){
+                    objSP = new Search('http://api.themoviedb.org/3/search/tv', 'a6f2f098a83113aa672bd04867dba148', query, c);
+                    series = objSP.searchPeliculaSerie();                    
+                }      
+              }
+            }       
+           });
 
     })

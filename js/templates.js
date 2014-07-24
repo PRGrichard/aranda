@@ -1,13 +1,13 @@
 var Templates = {};
 
-Templates.peliculas = [
+Templates.series = [
    
     '<article>',
         '<figure>',
                '<img src="{{ thumb }}" />',
          '</figure>',
          '<div  class="title">',
-            '<a href="#"> <h2>{{ title }}</h2></a>',
+            '<a href="#"> <h2>{{ name }}</h2></a>',
           '</div>',
     '</article>'
                                    
